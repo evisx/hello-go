@@ -56,6 +56,16 @@ go build -o app && ./app
 
 > model, handler and view
 
-1. refactor
+1. [♻ extract showIndexPage handler and render](https://github.com/evisx/golang-demos/commit/5f7c097df0f498fc25ac5b9397837d4d1e81e79c)
 
 - extract handler, html render
+
+2. article model
+
+- type article struct
+- example articles
+- test getAllArticles
+
+3. index for all example articles
+
+4. article view and handler
