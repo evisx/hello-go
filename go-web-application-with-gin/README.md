@@ -15,6 +15,8 @@ go get -u github.com/gin-gonic/gin
 
 # developing
 
+## basic page and router
+
 1. [✨ router for index\.html](https://github.com/evisx/golang-demos/commit/7bc96b0e28337383ab08f7cc9cfc9a19c22e6ebd)
 
 - create `template/index.html`
@@ -34,7 +36,26 @@ go build -o app && ./app
 - extract header and footer base on index.html
 - use bootstrap
 
-3. add menu template
+3. [✨ add navigation menu](https://github.com/evisx/golang-demos/commit/97e9ecdf8c1f9d584248f1d93b5abb5bc63301f6) 
 
 - create menu.html
 - embed template at header.html
+
+4. look back, currently we have:
+
+``` text
+├── main.go
+└── templates
+    ├── footer.html
+    ├── header.html
+    ├── index.html
+    └── menu.html
+```
+
+## article model
+
+> model, handler and view
+
+1. refactor
+
+- extract handler, html render
