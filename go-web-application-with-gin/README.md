@@ -15,7 +15,7 @@ go get -u github.com/gin-gonic/gin
 
 # developing
 
-1. router for index.html 
+1. [✨ router for index\.html](https://github.com/evisx/golang-demos/commit/7bc96b0e28337383ab08f7cc9cfc9a19c22e6ebd)
 
 - create `template/index.html`
 - create `main.go`
@@ -26,4 +26,11 @@ then run app
 go build -o app && ./app
 # default listen in http://localhost:8080/
 ```
+
+2. Extract reusable templates
+
+> header, menu, sidebar, and footer, which will be common across all pages
+
+- extract header and footer base on index.html
+- use bootstrap
 
