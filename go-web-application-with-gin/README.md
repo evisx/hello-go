@@ -13,3 +13,17 @@ go mod init github.com/your_user_name/your_path
 go get -u github.com/gin-gonic/gin
 ```
 
+# developing
+
+1. router for index.html 
+
+- create `template/index.html`
+- create `main.go`
+- add `gin engine` usage codes
+
+then run app
+``` shell
+go build -o app && ./app
+# default listen in http://localhost:8080/
+```
+
