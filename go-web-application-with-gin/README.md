@@ -60,7 +60,7 @@ go build -o app && ./app
 
 - extract handler, html render
 
-2. article model
+2. [✨ article model](https://github.com/evisx/golang-demos/commit/d5cb89bbd98ae55c6c2d061a534fadd383d1ab06)
 
 - type article struct
 - example articles
