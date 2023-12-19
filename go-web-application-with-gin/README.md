@@ -72,12 +72,14 @@ go build -o app && ./app
 
 ## unit test router handler
 
-1. test router handler by http requesting (use testing, httptest) for showIndexPage
+1. [✨ unitest showIndePage](https://github.com/evisx/golang-demos/commit/a8efadb2b3acdca7b070ec8c73bd682cbd0a94b6)
+- test router handler by http requesting (use testing, httptest) for showIndexPage
+    - extract getRuouterWithInitialized from main
+    - statusOK: should https status ok
+    - pageOK: should include some special html tag
+    - simulate http request and response by router serving http
 
-- extract getRuouterWithInitialized from main
-- statusOK: should https status ok
-- pageOK: should include some special html tag
-- simulate http request and response
+2. extract common test helper function
 
 ## article view 
 
