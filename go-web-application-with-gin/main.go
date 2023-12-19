@@ -21,10 +21,10 @@ func main() {
 
 	router := getRouterWithInitialized(true)
 
-	// Define the route for the index page and display the index.html template
-	// To start with, we'll use an inline route handler. Later on, we'll create
-	// standalone functions that will be used as route handlers.
+	// Handle index
 	router.GET("/", showIndexPage)
+	// Handle single article by its id
+	router.GET("/article/view/:article_id", showArticle)
 
 	// Start serving the application
 	router.Run()

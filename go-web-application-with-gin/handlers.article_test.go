@@ -31,3 +31,13 @@ func TestShowIndexPageUnauthenticated(t *testing.T) {
 			return statusOK && pageOK
 		})
 }
+
+func TestShowArticleUnauthenticated(t *testing.T) {
+	simpleTestHTTPResponse(t, "GET", "/article/view/1",
+		func (r *gin.Engine) {
+			r.GET("/article/view/:article_id", showArticle)
+		},
+		func (w *httptest.ResponseRecorder) bool {
+			return true
+		})
+}
