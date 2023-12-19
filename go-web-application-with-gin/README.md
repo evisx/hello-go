@@ -1,5 +1,3 @@
-- follow [this blog](https://semaphoreci.com/community/tutorials/building-go-web-applications-and-microservices-using-gin#h-goals)
-
 # Preparation
 
 ``` shell
@@ -91,14 +89,18 @@ go build -o app && ./app
 
 ## more response format
 
-1. get request header: Accept
-2. render right format for request
-   - `application/json` will render JSON
-   - `application/xml` will render XML
-   - otherwise default render HTML
+- [✨ response format by requset header of Accept](https://github.com/evisx/golang-demos/commit/1c560dfbb2790d30d1deb3d0343656c547af48c3)
+    1. get request header: Accept
+    2. render right format for request
+        - `application/json` will render JSON
+        - `application/xml` will render XML
+        - otherwise default render HTML
    
 ``` shell
 curl -X GET -H "Accept: application/json" http://localhost:8080/
 
 curl -X GET -H "Accept: application/xml" http://localhost:8080/article/view/1
 ```
+## Reference
+
+- Mostly follow [this blog](https://semaphoreci.com/community/tutorials/building-go-web-applications-and-microservices-using-gin#h-goals)
