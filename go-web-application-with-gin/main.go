@@ -4,13 +4,22 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func main() {
+// Helper function to create a router
+func getRouterWithInitialized(withTemplateLoaded bool) *gin.Engine {
 	// Set the router as the default one provided by Gin
 	router := gin.Default()
 
-	// Process the templates at the start so that they don't have to be loaded
-	// from the disk again. This makes serving HTML pages very fast.
-	router.LoadHTMLGlob("templates/*")
+	if withTemplateLoaded {
+		// Process the templates at the start so that they don't have to be loaded
+		// from the disk again. This makes serving HTML pages very fast.
+		router.LoadHTMLGlob("templates/*")
+	}
+	return router
+}
+
+func main() {
+
+	router := getRouterWithInitialized(true)
 
 	// Define the route for the index page and display the index.html template
 	// To start with, we'll use an inline route handler. Later on, we'll create

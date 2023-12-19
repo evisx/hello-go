@@ -66,6 +66,19 @@ go build -o app && ./app
 - example articles
 - test getAllArticles
 
-3. index for all example articles
+3. [✨ index list all articles](https://github.com/evisx/golang-demos/commit/96914404d867c2fb5e8a79bef9544f9226fbefb6)
 
-4. article view and handler
+- render payload
+
+## unit test router handler
+
+1. test router handler by http requesting (use testing, httptest) for showIndexPage
+
+- extract getRuouterWithInitialized from main
+- statusOK: should https status ok
+- pageOK: should include some special html tag
+- simulate http request and response
+
+## article view 
+
+1. display single artical
