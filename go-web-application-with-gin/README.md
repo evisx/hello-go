@@ -80,6 +80,8 @@ go build -o app && ./app
     - simulate http request and response by router serving http
 
 2. extract common test helper function
+- [♻ extract common test helper](https://github.com/evisx/golang-demos/commit/ae4d0f4be0f6666bc50ccc24da1a27c09ddfc01a)
+- [♻ extract simpleHTTPResponse](https://github.com/evisx/golang-demos/commit/e57f4177ffb11d08ccfd7c3461a82fbdd3520fc2)
 
 ## article view 
 
