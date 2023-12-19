@@ -26,3 +26,10 @@ func testHTTPResponse(t *testing.T, r *gin.Engine, req *http.Request, f func(w *
 		t.Fail()
 	}
 }
+
+// Helper function for simple HTTP testing
+func simpleTestHTTPResponse(t *testing.T, method string, path string, config func(r *gin.Engine), f func (w *httptest.ResponseRecorder) bool) {
+	r := initializeRouter(config)
+	req, _ := http.NewRequest(method, path, nil)
+	testHTTPResponse(t, r, req, f)
+}
