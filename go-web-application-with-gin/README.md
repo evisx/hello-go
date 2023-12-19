@@ -87,3 +87,18 @@ go build -o app && ./app
 
 1. display single simple article
 - [✨ article view](https://github.com/evisx/golang-demos/commit/29843844dfde8c005751f71dd536b9a185c4f661)
+- [♿ view article by id](https://github.com/evisx/golang-demos/commit/654d5531b4d987eef639741d27e315062dd3299e)
+
+## more response format
+
+1. get request header: Accept
+2. render right format for request
+   - `application/json` will render JSON
+   - `application/xml` will render XML
+   - otherwise default render HTML
+   
+``` shell
+curl -X GET -H "Accept: application/json" http://localhost:8080/
+
+curl -X GET -H "Accept: application/xml" http://localhost:8080/article/view/1
+```
