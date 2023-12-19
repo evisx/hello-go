@@ -23,3 +23,21 @@ func TestGetAllArticles(t *testing.T) {
 		}
 	}
 }
+
+// Test the function that fetches given ID's article
+func TestGetArticleByID(t *testing.T) {
+	alist := getAllArticles()
+
+	if len(alist) != len(articleList) {
+		t.Fail()
+	}
+
+	for _, v := range alist {
+		result, error := getArticleByID(v.ID)
+
+		if error != nil || v.ID != result.ID || v.Title != result.Title || v.Content != result.Content {
+			t.Fail()
+			break
+		}
+	}
+}

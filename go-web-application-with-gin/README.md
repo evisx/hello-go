@@ -85,4 +85,5 @@ go build -o app && ./app
 
 ## article view 
 
-1. display single artical
+1. display single simple article
+- [✨ article view](https://github.com/evisx/golang-demos/commit/29843844dfde8c005751f71dd536b9a185c4f661)

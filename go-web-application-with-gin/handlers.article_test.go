@@ -1,12 +1,13 @@
 package main
 
 import (
-  "io/ioutil"
-  "strings"
-  "net/http"
-  "net/http/httptest"
-  "testing"
-  "github.com/gin-gonic/gin"
+	"io/ioutil"
+	"strings"
+	"net/http"
+	"net/http/httptest"
+	"testing"
+
+	"github.com/gin-gonic/gin"
 )
 
 // Test that a GET request to the home page returns the home page with
@@ -38,6 +39,14 @@ func TestShowArticleUnauthenticated(t *testing.T) {
 			r.GET("/article/view/:article_id", showArticle)
 		},
 		func (w *httptest.ResponseRecorder) bool {
-			return true
+			return w.Code == http.StatusOK
+		})
+
+	simpleTestHTTPResponse(t, "GET", "/article/view/11",
+		func (r *gin.Engine) {
+			r.GET("/article/view/:article_id", showArticle)
+		},
+		func (w *httptest.ResponseRecorder) bool {
+			return w.Code == http.StatusNotFound
 		})
 }
